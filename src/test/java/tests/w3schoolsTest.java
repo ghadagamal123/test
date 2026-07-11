@@ -1,14 +1,10 @@
 package tests;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.herokuapp;
-import pages.w3schoolpage;
-
-import java.util.List;
+import Pages.w3schoolpage;
 
 public class w3schoolsTest extends BaseTest {
 

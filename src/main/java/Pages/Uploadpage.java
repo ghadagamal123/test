@@ -1,4 +1,4 @@
-package pages;
+package Pages;
 
 public class Uploadpage {
 }
