@@ -8,10 +8,10 @@ import org.testng.annotations.Test;
 
 public class DuckduckTest extends TestCase {
     duckduckpage duckduckpage;
-    BotActions bot ;
     resultspage resultspage;
     @Test
     public void ValidateThatTitleIsGoogle(){
+        duckduckpage=new duckduckpage(bot);
         duckduckpage.Navigate();
         bot.AssertTitle("Google");
 
