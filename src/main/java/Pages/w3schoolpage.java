@@ -1,5 +1,6 @@
 package Pages;
 
+import Engine.BotActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,16 +10,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class w3schoolpage {
-    WebDriver driver;
-    WebDriverWait wait;
-    By country= By.xpath("//table[@class=\"ws-table-all\"]/tbody/tr[4]/td[3]");
-    public w3schoolpage(WebDriver driver) {
-        this.driver=driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    public By country= By.xpath("//*[text()='Ernst Handel']/following-sibling::td[2]");
+    BotActions bot;
+    public w3schoolpage(BotActions bot) {
+        this.bot = bot;
 
     }
-    public String getcountryvalue(){
-        WebElement countryelement=wait.until(ExpectedConditions.visibilityOfElementLocated(country));
-        return countryelement.getText();
+
+    public void navigateToW3SchoolPage() {
+        bot.Natigate("https://www.w3schools.com/html/html_tables.asp");
     }
+
 }

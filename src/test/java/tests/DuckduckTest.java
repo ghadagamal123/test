@@ -1,41 +1,34 @@
 package tests;
 
+import Engine.BotActions;
+import Pages.duckduckpage;
+import Pages.resultspage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DuckduckTest extends BaseTest {
+public class DuckduckTest extends TestCase {
+    duckduckpage duckduckpage;
+    BotActions bot ;
+    resultspage resultspage;
     @Test
-    public void task1gettitle(){
-        String title= duckduckpage.getTtitle();
-        Assert.assertEquals(title , "google");
+    public void ValidateThatTitleIsGoogle(){
+        duckduckpage.Navigate();
+        bot.AssertTitle("Google");
+
     }
 
-    @Test
-    public void task2checkiflogoexsits(){
-        Assert.assertTrue(duckduckpage.logoisdisplayed());
-    }
-
   @Test
-    public void task3getforthtext(){
-     duckduckpage.inserttextinsearchbox();
-     duckduckpage.clickfirstspan();
-     Assert.assertEquals(resultspage.geturlforfirstresult(),"https://www.selenium.dev/documentation/webdriver/");
+    public void ValidateFirstResult(){
+        duckduckpage.InsertValue();
+        bot.AssertFirstResultURl(resultspage.firstresult);
   }
 
   @Test
-    public void task4(){
-        duckduckpage.inserttestng();
-        Assert.assertEquals(duckduckpage.gettext4thresult(),"TestNG Tutorial");
+    public void ValidateSecondResultLink(){
+        duckduckpage.InsertValue2();
+        bot.AssertSecondResultURl(resultspage.secondresult);
 
   }
-
-  @Test
-    public void task5(){
-        duckduckpage.insertcucumebr();
-        duckduckpage.clicksecondspan();
-        Assert.assertTrue(resultspage.geturlforsecondresult().contains("https://www.linkedin.com"));
-  }
-
 
 
 }

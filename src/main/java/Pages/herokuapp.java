@@ -1,5 +1,6 @@
 package Pages;
 
+import Engine.BotActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,24 +11,15 @@ import java.time.Duration;
 import java.util.List;
 
 public class herokuapp {
-    private WebDriver driver;
-    private WebDriver firefoxdriver;
-    private WebDriverWait wait;
-    By checkboxoption = By.xpath("//form[@id=\"checkboxes\"]/input[@type=\"checkbox\"][1]");
-    By check =By.xpath("//form[@id=\"checkboxes\"]/input[@type=\"checkbox\"]");
-    public herokuapp(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    BotActions bot;
+    public By checkboxoption1 = By.xpath("//form[@id=\"checkboxes\"]/input[@type=\"checkbox\"][1]");
+    public By checkboxoption2 =By.xpath("//form[@id=\"checkboxes\"]/input[@type=\"checkbox\"]");
+
+    public herokuapp(BotActions bot) {
+        this.bot = bot;
     }
    public void selectcheckbox(){
-       WebElement checkboxelement =wait.until(ExpectedConditions.visibilityOfElementLocated(checkboxoption ));
-       checkboxelement.click();
+       bot.ClickcheckBoxoption(checkboxoption1);
    }
-   public List<WebElement> getcheckboxes(){
-       List<WebElement> checkboxes = wait.until(
-               ExpectedConditions.visibilityOfAllElementsLocatedBy(check)
-       );
 
-       return checkboxes;
-   }
 }
