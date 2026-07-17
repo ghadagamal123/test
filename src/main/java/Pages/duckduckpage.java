@@ -11,11 +11,11 @@ import java.time.Duration;
 
 public class duckduckpage {
     BotActions bot;
-    public By logo= By.xpath("//*[@id=\"__next\"]/div/div/main/article/div[1]/div[1]/div[2]/div/header/div");
+    public By logo= By.xpath("//a[@title='Learn about DuckDuckGo']//img)[2]");
     private By searchbox = By.id("searchbox_input");
-    private By firstspan =By.xpath("//*[@id=\"searchbox-suggestions\"]/div/div/div[1]");
-    private By forthspan = By.xpath("(//*[@id=\"searchbox-suggestions\"]/div/div/div[4])");
-    private By secondspan = By.xpath("(//*[@id=\"searchbox-suggestions\"]/div/div/div[2])");
+    //private By firstspan =By.xpath("//*[@id=\"searchbox-suggestions\"]/div/div/div[1]");
+    //private By forthspan = By.xpath("(//*[@id=\"searchbox-suggestions\"]/div/div/div[4])");
+    //private By secondspan = By.xpath("(//*[@id=\"searchbox-suggestions\"]/div/div/div[2])");
 
     public duckduckpage(BotActions bot) {
         this.bot = bot;

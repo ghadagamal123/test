@@ -3,6 +3,8 @@ package Engine;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
@@ -121,7 +123,24 @@ public class BotActions {
 
     }
 
+    public void DragandDrop(By Sourcelocator,By taregtLocator){
 
+        wait.until(d -> {
+            WebElement sourceElement = d.findElement(Sourcelocator);
+            WebElement targetElement = d.findElement(taregtLocator);
+            Actions actions = new Actions(d);
+            actions.dragAndDrop(sourceElement, targetElement).perform();
+            return true ;
+        });
+
+    }
+
+    public void AsserTextEqual3(By locator){
+        wait.until(d -> {
+            Assert.assertEquals(d.findElement(locator).getText(),"Dropped!");
+            return true ;
+        });
+
+    }
 }
-
 

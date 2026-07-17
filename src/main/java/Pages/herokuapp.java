@@ -12,8 +12,8 @@ import java.util.List;
 
 public class herokuapp {
     BotActions bot;
-    public By checkboxoption1 = By.xpath("//form[@id=\"checkboxes\"]/input[@type=\"checkbox\"][1]");
-    public By checkboxoption2 =By.xpath("//form[@id=\"checkboxes\"]/input[@type=\"checkbox\"]");
+    public By checkboxoption1 = By.xpath("(//input)[1]");
+    public By checkboxoption2 =By.xpath("\"(//input)[2]\"");
 
     public herokuapp(BotActions bot) {
         this.bot = bot;

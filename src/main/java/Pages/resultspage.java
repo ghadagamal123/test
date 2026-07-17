@@ -11,25 +11,15 @@ import java.time.Duration;
 public class resultspage {
     WebDriver driver;
     WebDriverWait wait;
-   public By firstresult=By.xpath("//ol[@class='react-results--main']/li[1]/article/div[3]/h2/a");
-   public  By secondresult=By.xpath("//ol[@class='react-results--main']/li[2]/article/div[3]/h2/a");
+   public By firstresult=By.xpath("(//a[@data-testid='result-title-a'])[1]");
+   public  By secondresult=By.xpath("(//a[@data-testid='result-title-a']/span)[4]");
     public resultspage(WebDriver driver) {
         this.driver=driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     }
 
-    public String geturlforfirstresult()
-    {
-        WebElement firstresultElement = wait.until(ExpectedConditions.visibilityOfElementLocated(firstresult));
-      return firstresultElement.getAttribute("href");
-    }
 
-   public String geturlforsecondresult()
-   {
-       WebElement secondresultElement = wait.until(ExpectedConditions.visibilityOfElementLocated(secondresult));
-       return secondresultElement.getAttribute("href");
-   }
 
 
 }
