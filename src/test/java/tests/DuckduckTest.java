@@ -20,13 +20,13 @@ public class DuckduckTest extends TestCase {
   @Test
     public void ValidateFirstResult(){
         duckduckpage.InsertValue("Selenium WebDriver");
-        bot.AssertFirstResultURl(resultspage.firstresult);
+        bot.AsserURlEqual(resultspage.firstresult,"https://www.selenium.dev/documentation/webdriver/");
   }
 
   @Test
     public void ValidateSecondResultLink(){
         duckduckpage.InsertValue("Cucumber IO");
-        bot.AssertSecondResultURl(resultspage.secondresult);
+        bot.AssertURLcontains(resultspage.secondresult,"https://www.linkedin.com");
 
   }
 

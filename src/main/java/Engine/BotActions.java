@@ -39,16 +39,16 @@ public class BotActions {
     }
 
 
-    public void  AssertFirstResultURl(By locator){
+    public void  AsserURlEqual(By locator,String url){
         wait.until(d -> {
-            Assert.assertEquals(d.findElement(locator).getAttribute("href"), "https://www.selenium.dev/documentation/webdriver/");
+            Assert.assertEquals(d.findElement(locator).getAttribute("href"), url);
             return true ;
         });
     }
 
-    public void  AssertSecondResultURl(By locator){
+    public void  AssertURLcontains(By locator,String URL){
         wait.until(d -> {
-            Assert.assertTrue(d.findElement(locator).getAttribute("href").contains("https://www.linkedin.com"));
+            Assert.assertTrue(d.findElement(locator).getAttribute("href").contains(URL));
             return true ;
         });
     }
