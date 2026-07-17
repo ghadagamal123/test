@@ -25,16 +25,9 @@ public class duckduckpage {
         bot.Natigate("https://duckduckgo.com/");
     }
 
-    public void InsertValue(){
-    bot.InsertSeleniumWebDriver(searchbox);
-
+    public void InsertValue(String string){
+    bot.InsertText(searchbox,string);
     }
-
-    public void InsertValue2(){
-        bot.InsertSeleniumWebDriver(searchbox);
-
-    }
-
 
 
 }

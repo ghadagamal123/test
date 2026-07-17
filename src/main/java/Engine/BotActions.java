@@ -30,19 +30,14 @@ public class BotActions {
         });
     }
 
-    public void  InsertSeleniumWebDriver(By locator){
+
+    public void  InsertText(By locator,String text){
         wait.until(d -> {
-            d.findElement(locator).sendKeys("Selenium WebDriver"+ Keys.ENTER);
+            d.findElement(locator).sendKeys(text+ Keys.ENTER);
             return true ;
         });
     }
 
-    public void  InsertCucumberIO(By locator){
-        wait.until(d -> {
-            d.findElement(locator).sendKeys("Cucumber IO"+ Keys.ENTER);
-            return true ;
-        });
-    }
 
     public void  AssertFirstResultURl(By locator){
         wait.until(d -> {
