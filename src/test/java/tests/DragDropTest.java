@@ -8,6 +8,7 @@ public class DragDropTest extends TestCase {
     @Test
     public void ValidateDraganddrop(){
         dragDropPage = new DragDropPage(bot);
+        dragDropPage.Navigate();
         dragDropPage.draganddrop();
         bot.AsserTextEqual(dragDropPage.droppableText,"Dropped!");
     }

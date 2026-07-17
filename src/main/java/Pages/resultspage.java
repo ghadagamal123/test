@@ -13,11 +13,7 @@ public class resultspage {
     WebDriverWait wait;
    public By firstresult=By.xpath("(//a[@data-testid='result-title-a'])[1]");
    public  By secondresult=By.xpath("(//a[@data-testid='result-title-a']/span)[4]");
-    public resultspage(WebDriver driver) {
-        this.driver=driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-    }
 
 
 

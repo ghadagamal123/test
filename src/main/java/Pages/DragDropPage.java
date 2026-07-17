@@ -9,9 +9,14 @@ public class DragDropPage {
     BotActions bot;
    public By droppableText=By.xpath("//div[@id='droppable']/p");
 
-    public DragDropPage(BotActions bot){
-        this.bot = bot;
+    public void Navigate(){
+        bot.Natigate("https://jqueryui.com/resources/demos/droppable/default.html");
     }
+    public DragDropPage(BotActions bot){
+       // bot= this.bot;
+        this.bot=bot;
+    }
+
     public void draganddrop(){
         bot.DragandDrop(source,target);
     }

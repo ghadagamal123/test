@@ -14,7 +14,7 @@ public class w3schoolpage {
     public By country= By.xpath("//*[text()='Ernst Handel']/following-sibling::td[2]");
     BotActions bot;
     public w3schoolpage(BotActions bot) {
-        this.bot = bot;
+        this.bot=bot;
 
     }
 

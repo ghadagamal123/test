@@ -18,7 +18,7 @@ public class duckduckpage {
     //private By secondspan = By.xpath("(//*[@id=\"searchbox-suggestions\"]/div/div/div[2])");
 
     public duckduckpage(BotActions bot) {
-        this.bot = bot;
+        this.bot=bot;
     }
 
     public void Navigate() {

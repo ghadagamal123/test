@@ -16,7 +16,7 @@ public class herokuapp {
     public By checkboxoption2 =By.xpath("\"(//input)[2]\"");
 
     public herokuapp(BotActions bot) {
-        this.bot = bot;
+        this.bot=bot;
     }
    public void selectcheckbox(){
        bot.ClickcheckBoxoption(checkboxoption1);

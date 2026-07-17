@@ -11,7 +11,7 @@ public class Uploadpage {
     By uploadButton = By.id("file-submit");
     BotActions bot;
     public Uploadpage(BotActions bot) {
-        this.bot = bot;
+        this.bot=bot;
     }
 
     public void uploadfile(){
