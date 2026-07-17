@@ -107,22 +107,6 @@ public class BotActions {
         });
     }
 
-    public void AsserTextEqual(By locator){
-        wait.until(d -> {
-            Assert.assertEquals(d.findElement(locator).getText(),"File Uploaded!");
-            return true ;
-        });
-
-    }
-
-    public void AsserTextEqual2(By locator){
-        wait.until(d -> {
-            Assert.assertEquals(d.findElement(locator).getText(),"Austria");
-            return true ;
-        });
-
-    }
-
     public void DragandDrop(By Sourcelocator,By taregtLocator){
 
         wait.until(d -> {
@@ -135,9 +119,10 @@ public class BotActions {
 
     }
 
-    public void AsserTextEqual3(By locator){
+
+    public void AsserTextEqual(By locator,String text){
         wait.until(d -> {
-            Assert.assertEquals(d.findElement(locator).getText(),"Dropped!");
+            Assert.assertEquals(d.findElement(locator).getText(),text);
             return true ;
         });
 

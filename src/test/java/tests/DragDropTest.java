@@ -9,6 +9,6 @@ public class DragDropTest extends TestCase {
     public void ValidateDraganddrop(){
         dragDropPage = new DragDropPage(bot);
         dragDropPage.draganddrop();
-        bot.AsserTextEqual3(dragDropPage.droppableText);
+        bot.AsserTextEqual(dragDropPage.droppableText,"Dropped!");
     }
 }

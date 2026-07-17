@@ -12,7 +12,7 @@ public class w3schoolsTest extends TestCase {
     public void ValidateUpload() {
     w3schoolpage w3schoolpage = new w3schoolpage(bot);
     w3schoolpage.navigateToW3SchoolPage();
-    bot.AsserTextEqual2(w3schoolpage.country);
+    bot.AsserTextEqual(w3schoolpage.country,"Austria");
     }
 
 }

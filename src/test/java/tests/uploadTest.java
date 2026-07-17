@@ -9,7 +9,7 @@ public class uploadTest extends TestCase {
     @Test
     public void uploadfile(){
         uploadpage=new Uploadpage(bot);
-        bot.AsserTextEqual(uploadpage.h1);
+        bot.AsserTextEqual(uploadpage.h1,"File Uploaded!");
     }
 
 }
